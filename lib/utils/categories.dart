@@ -1,3 +1,4 @@
+import 'package:elearning/utils/topics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -9,7 +10,7 @@ class CategoriesList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
         width: double.infinity,
-        height: 200,
+        height: 160,
         child: GridView(
           scrollDirection: Axis.horizontal,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -19,39 +20,25 @@ class CategoriesList extends StatelessWidget {
             childAspectRatio: 1 / 1,
           ),
           children: [
-            Container(
-              padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                  color: Colors.indigo[800],
-                  borderRadius: BorderRadius.circular(30)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Icon(CupertinoIcons.square_on_circle,
-                          size: 40, color: Colors.white),
-                    ],
-                  ),
-                  Text(
-                    "Animation",
-                    style:
-                        GoogleFonts.roboto(fontSize: 30, color: Colors.white),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(30)),
-                        child: Icon(CupertinoIcons.arrow_up_right),
-                      )
-                    ],
-                  )
-                ],
-              ),
+            TopicLists(
+              iconName: CupertinoIcons.square_on_circle,
+              topicName: "Animation",
+              colorName: Colors.deepPurple[700]!,
+            ),
+            TopicLists(
+              iconName: CupertinoIcons.command,
+              topicName: "Coding",
+              colorName: Colors.deepOrange[700]!,
+            ),
+            TopicLists(
+              iconName: CupertinoIcons.camera,
+              topicName: "Photography",
+              colorName: Colors.green[700]!,
+            ),
+            TopicLists(
+              iconName: CupertinoIcons.music_mic,
+              topicName: "Singing",
+              colorName: Colors.red[700]!,
             ),
           ],
         ));
