@@ -1,46 +1,54 @@
-import 'package:elearning/utils/topics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CategoriesList extends StatelessWidget {
-  const CategoriesList({super.key});
+class TopicLists extends StatelessWidget {
+  final String topicName;
+  final IconData iconName;
+  final Color colorName;
+
+  const TopicLists(
+      {super.key,
+      required this.topicName,
+      required this.iconName,
+      required this.colorName});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        width: double.infinity,
-        height: 160,
-        child: GridView(
-          scrollDirection: Axis.horizontal,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 1,
-            mainAxisSpacing: 5.00,
-            crossAxisSpacing: 5.00,
-            childAspectRatio: 1 / 1,
+    return Container(
+      padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+          color: colorName, borderRadius: BorderRadius.circular(30)),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              Icon(iconName, size: 15, color: Colors.white),
+            ],
           ),
-          children: [
-            TopicLists(
-              iconName: CupertinoIcons.square_on_circle,
-              topicName: "Animation",
-              colorName: Colors.deepPurple[700]!,
-            ),
-            TopicLists(
-              iconName: CupertinoIcons.command,
-              topicName: "Coding",
-              colorName: Colors.deepOrange[700]!,
-            ),
-            TopicLists(
-              iconName: CupertinoIcons.camera,
-              topicName: "Photography",
-              colorName: Colors.green[700]!,
-            ),
-            TopicLists(
-              iconName: CupertinoIcons.music_mic,
-              topicName: "Singing",
-              colorName: Colors.red[700]!,
-            ),
-          ],
-        ));
+          Row(
+            children: [
+              Text(
+                topicName,
+                style: GoogleFonts.lato(fontSize: 20, color: Colors.white),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Container(
+                padding: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30)),
+                child: Icon(CupertinoIcons.arrow_up_right),
+              )
+            ],
+          )
+        ],
+      ),
+    );
   }
 }
