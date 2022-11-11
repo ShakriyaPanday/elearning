@@ -1,5 +1,6 @@
 import 'package:elearning/utils/categories.dart';
 import 'package:elearning/utils/course.dart';
+import 'package:elearning/utils/coursedesign.dart';
 import 'package:elearning/utils/popular.dart';
 import 'package:elearning/utils/profile.dart';
 import 'package:flutter/cupertino.dart';
@@ -13,7 +14,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.grey[300],
+        backgroundColor: Colors.grey[100],
         body: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -30,7 +31,7 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              CourseView(),
+              CourseTile(),
             ],
           ),
         ),
