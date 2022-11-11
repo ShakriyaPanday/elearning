@@ -14,7 +14,7 @@ class CourseTile extends StatelessWidget {
           star: 4.5,
           time: "12.01.2022 - 16.06.2022",
           price: 87,
-          backColor: Colors.blue[200]!,
+          backColor: Colors.lightBlue[200]!,
           lesson: 86,
           iconName: CupertinoIcons.square_favorites_alt,
         ),

@@ -1,4 +1,4 @@
-import 'package:elearning/utils/topics.dart';
+import 'package:elearning/utils/categories.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -39,6 +39,11 @@ class CategoriesList extends StatelessWidget {
               iconName: CupertinoIcons.music_mic,
               topicName: "Singing",
               colorName: Colors.red[700]!,
+            ),
+            TopicLists(
+              iconName: CupertinoIcons.money_dollar,
+              topicName: "Banking",
+              colorName: Colors.pink[700]!,
             ),
           ],
         ));

@@ -1,6 +1,6 @@
-import 'package:elearning/utils/categories.dart';
+import 'package:elearning/utils/categoriesview.dart';
 import 'package:elearning/utils/course.dart';
-import 'package:elearning/utils/coursedesign.dart';
+import 'package:elearning/utils/courseview.dart';
 import 'package:elearning/utils/popular.dart';
 import 'package:elearning/utils/profile.dart';
 import 'package:flutter/cupertino.dart';
