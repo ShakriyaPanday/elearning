@@ -1,4 +1,5 @@
 import 'package:elearning/utils/categories.dart';
+import 'package:elearning/utils/popular.dart';
 import 'package:elearning/utils/profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,11 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              CategoriesList()
+              CategoriesList(),
+              SizedBox(
+                height: 30,
+              ),
+              PopularTrend()
             ],
           ),
         ),

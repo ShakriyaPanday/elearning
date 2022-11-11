@@ -14,11 +14,13 @@ class ProfileDetail extends StatelessWidget {
           children: [
             Text(
               "Hello, ",
-              style: GoogleFonts.lato(fontSize: 25),
+              style: GoogleFonts.lato(fontSize: 25, color: Colors.grey[700]),
             ),
             Text("Shakriya",
                 style: GoogleFonts.actor(
-                    fontSize: 25, fontWeight: FontWeight.bold)),
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                )),
           ],
         ),
         Icon(
