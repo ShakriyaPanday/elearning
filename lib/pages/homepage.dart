@@ -1,4 +1,5 @@
 import 'package:elearning/utils/categories.dart';
+import 'package:elearning/utils/course.dart';
 import 'package:elearning/utils/popular.dart';
 import 'package:elearning/utils/profile.dart';
 import 'package:flutter/cupertino.dart';
@@ -25,7 +26,11 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              PopularTrend()
+              PopularTrend(),
+              SizedBox(
+                height: 30,
+              ),
+              CourseView(),
             ],
           ),
         ),
